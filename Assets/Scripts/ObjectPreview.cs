@@ -8,16 +8,13 @@ public class ObjectPreview : MonoBehaviour
     private bool toggleKeyPressed = false;
     // Start is called before the first frame update
     void Start() {
-        foreach (GameObject item in previewObjects)
-        {
+        foreach (GameObject item in previewObjects) {
             item.SetActive(toggleKeyPressed);
         }
     }
 
     public void changePreview(int value) {
-        foreach (GameObject item in previewObjects) {
-            item.SetActive(toggleKeyPressed);
-        }
+        Start();
         previewObjects[value].SetActive(true);
     }
 
